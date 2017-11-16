@@ -10,7 +10,7 @@ Usage
 update.py <all|inc>
 	[-H --mongodb-host, -P --mongodb-port]
 	[-mu --mongodb-user, -mp --mongodb-password]
-		[-U --mongdo-uri]
+	[-U --mongdo-uri]
 	[-c --contracts,  -p --products, -o --organizations]
 ```
 
