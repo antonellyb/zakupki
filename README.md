@@ -21,9 +21,7 @@ First argument is the type of update.
 If you have no data in your `MongoDB`, there's no difference between `all` and `inc`.
 
 You can also provide host address and port if your `MongoDB` is not running on `localhost`. And username-password if you `MongoDB` uses authentication.
-
 OR
-
 you can provide full URI instead. It can be necessary when connecting to SaaS MongDB. For example, the URI can be as follows.
 'mongodb://user:pass@host:port/db'
 
