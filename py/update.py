@@ -77,6 +77,7 @@ if __name__ == '__main__':
 	parser.add_argument('-P', '--mongodb-port', dest='port', action='store', default=27017, type=int)
 	parser.add_argument('-mu', '--mongodb-user', dest='user', action='store')
 	parser.add_argument('-mp', '--mongodb-password', dest='passwd', action='store')
+	parser.add_argument('-U', '--mongodb-uri', dest='uri', action='store')	
 	
 	# parser.add_argument('-n', '--notifications', dest='collections', action='append_const', const='notifications')
 	parser.add_argument('-c', '--contracts', dest='collections', action='append_const', const='contracts')
@@ -88,7 +89,10 @@ if __name__ == '__main__':
 
 	print ts(), 'Starting {type} update'.format(type=args.type)
 	print ts(), 'Connecting mongodb'
-	client = MongoClient(args.host, args.port)
+	if args.uri:
+	    client = MongoClient(args.uri)
+	else:
+	    client = MongoClient(args.host, args.port)
 
 	db = client.zakupki
 
